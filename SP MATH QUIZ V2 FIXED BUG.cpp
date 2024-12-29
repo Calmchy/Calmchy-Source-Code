@@ -30,19 +30,19 @@ void score(int& score1, int& score2, int& score3, int& score4) {
 	double percentage = total*2;
 	
 	string rate;
-	if (total >= 1 && total <= 7) { 
+	if (total >= 1 && total <= 10) { 
 		rate = "★☆☆☆☆    \t     ";
 	}
-	else if (total >= 8 && total <= 12) {
+	else if (total >= 11 && total <= 20) {
 		rate = "★★☆☆☆    \t     ";
 	}
-	else if (total >= 13 && total <= 22) {
+	else if (total >= 21 && total <= 30) {
 		rate = "★★★☆☆    \t     ";
 	}
-	else if (total >= 23 && total <= 28) {
+	else if (total >= 31 && total <= 40) {
 		rate = "★★★★☆    \t     ";
 	}
-	else if (total >= 29 && total <= 30) {
+	else if (total >= 41 && total <= 50) {
 		rate = "★★★★★    \t     ";
 	}
 	else {
