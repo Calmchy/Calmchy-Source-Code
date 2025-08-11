@@ -4,6 +4,7 @@
 using namespace std;
 
 // noob code fr XD
+// Spaghetti code instead of using loops i use recursive function -_-
 int main();
 int func = 1;
 int score1 = 0;
