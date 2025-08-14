@@ -196,7 +196,7 @@ class productMenu {
 			}
 		}
 		
-		std::string getProductName(int mailCourse, int mailChoice) {
+		std::string getProductName(int &mailCourse, int &mailChoice) {
 			switch (mailCourse) {
 				case 1:
 					return appetizer.at(mailChoice - 1).name;   
@@ -208,7 +208,7 @@ class productMenu {
 					return mainDish.at(mailChoice - 1).name;
 					break;
 				case 4:
-					return mainDish.at(mailChoice - 1).name;    
+					return drinks.at(mailChoice - 1).name; 
 					break;
 				case 5:
 					return desserts.at(mailChoice - 1).name;    
@@ -219,12 +219,37 @@ class productMenu {
 				default:
 					return "";
 			}
-		}	
+		}
+
+		double getPrice(int &mailCourse, int &mailChoice) {
+			switch (mailCourse) {
+				case 1:
+					return appetizer.at(mailChoice - 1).price;
+					break;
+				case 2:
+					return salad.at(mailChoice - 1).price;
+					break;
+				case 3:
+					return mainDish.at(mailChoice - 1).price;
+					break;
+				case 4:
+					return drinks.at(mailChoice - 1).price;
+					break;
+				case 5:
+					return desserts.at(mailChoice - 1).price;
+					break;
+				case 6:
+					return hitDrinks.at(mailChoice - 1).price;
+					break;
+				default:
+					return 0;
+			}
+		}
 };
 
 class Order : public productMenu {
 	private:
-		userAccount* currentUser = nullptr;
+		userAccount* currentUser = nullptr; 
 		productMenu menu;
 
 	public:
@@ -440,10 +465,6 @@ class Order : public productMenu {
 			std::cout << std::endl;
 		}
 
-		void chooseProduct(int &choice) {
-			
-		}
-
 		void buyOrderFoods() {
 			
 		}
@@ -466,32 +487,36 @@ int main() {
 				if (isLogin) { // check if login 
 					do {
 						od.oderingMenu(choice2);
-						switch (choice2) {
-							case 1: //  Taking Order
-								od.takingOrder(choice3);
-								if (choice3 == 1) { // Order Foods
-									do {
-										od.chooseMealCourse(choice4);
+							if (choice2 == 1) { //  Taking Order
+								do {
+									od.takingOrder(choice3);
+									if (choice3 == 1) { // Order Foods
+										do {
+											od.chooseMealCourse(choice4);
+											
+										}
+										while (choice4 != 7);
 										
 									}
-									while (choice4 != 7);
-									
-								} else if (choice3 == 2) { // Buy Order Foods
-									
-								} else { // back
-									
+									else if (choice3 == 2) { // Buy Order Foods
+										
+									}
+									else if (choice3 == 3) { // back
+										
+									}
 								}
-								break;
-							case 2: // Show Receipt
+								while (choice3 != 3);
+							}
+							else if (choice2 == 2) { // Show Receipt
 								
-								break;
-							case 3: // Logout
-								break;
-						}
+							}
+							else if (choice2 == 3) { // Logout
+								
+							}
 					} while (choice2 != 3);
-				}
+				} // if (isLogin)
 				break;
-			case 3:
+			case 3: // Save and Exit
 				break;
 		}
 	} while (choice1 != 3);
