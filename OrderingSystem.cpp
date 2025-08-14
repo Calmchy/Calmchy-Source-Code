@@ -90,7 +90,7 @@ class userOrder {
 std::vector<userOrder*> userAllOrder;
 
 class productMenu {
-	public:
+	private:
 		std::vector<product> appetizer = {
 			{"Fried Spring Rolls", 55},
 			{"Quail Egg Fritters (4 pcs)", 40},
@@ -132,11 +132,8 @@ class productMenu {
 			{"Green Tea", 50},
 			{"Hot Chocolate", 40}
 		};
-
-		void displayProduct() {
-			
-		}
-
+		
+	public:
 		void buyOrder(userAccount* user, std::string fn, std::string mc, double prc, int qty, double cp) {
 			userOrder* order = new userOrder(user);
 			orderItem item(fn, mc, prc, qty);
@@ -153,6 +150,7 @@ class productMenu {
 					std::cout << " Name\t\tPrice" << std::endl;
 					for (auto p : appetizer) {
 						std::cout << "[" << i << "] " << p.name << "\t" << p.price << std::endl;
+						i++;
 					}
 					break;
 				case 2:
@@ -160,6 +158,7 @@ class productMenu {
 					std::cout << " Name\t\tPrice" << std::endl;
 					for (auto p : salad) {
 						std::cout << "[" << i << "] " << p.name << "\t" << p.price << std::endl;
+						i++;
 					}
 					break;
 				case 3:
@@ -167,6 +166,7 @@ class productMenu {
 					std::cout << " Name\t\tPrice" << std::endl;
 					for (auto p : appetizer) {
 						std::cout << "[" << i << "] " << p.name << "\t" << p.price << std::endl;
+						i++;
 					}
 					break;
 				case 4:
@@ -174,6 +174,7 @@ class productMenu {
 					std::cout << " Name\t\tPrice" << std::endl;
 					for (auto p : appetizer) {
 						std::cout << "[" << i << "] " << p.name << "\t" << p.price << std::endl;
+						i++;
 					}
 					break;
 				case 5:
@@ -181,6 +182,7 @@ class productMenu {
 					std::cout << " Name\t\tPrice" << std::endl;
 					for (auto p : appetizer) {
 						std::cout << "[" << i << "] " << p.name << "\t" << p.price << std::endl;
+						i++;
 					}
 					break;
 				case 6:
@@ -188,11 +190,36 @@ class productMenu {
 					std::cout << " Name\t\tPrice" << std::endl;
 					for (auto p : appetizer) {
 						std::cout << "[" << i << "] " << p.name << "\t" << p.price << std::endl;
+						i++;
 					}
 					break;
 			}
 		}
 		
+		std::string getProductName(int mailCourse, int mailChoice) {
+			switch (mailCourse) {
+				case 1:
+					return appetizer.at(mailChoice - 1).name;   
+					break;
+				case 2:
+					return salad.at(mailChoice - 1).name;
+					break;
+				case 3:
+					return mainDish.at(mailChoice - 1).name;
+					break;
+				case 4:
+					return mainDish.at(mailChoice - 1).name;    
+					break;
+				case 5:
+					return desserts.at(mailChoice - 1).name;    
+					break;
+				case 6:
+					return hitDrinks.at(mailChoice - 1).name;   
+					break;
+				default:
+					return "";
+			}
+		}	
 };
 
 class Order : public productMenu {
@@ -276,7 +303,17 @@ class Order : public productMenu {
 		void orderingSystemMenu(int &choice) {
             std::cout << "ORDERING SYSTEM MENU" << std::endl;
             std::cout << "[1] Register\n[2] Login\n[3] Exit" << std::endl;
-            inputInt(choice);
+            while (true) {
+            	std::cout << "Enter: ";
+            	inputInt(choice);
+            	if (choice < 1 || choice > 3) {
+            		std::cout << "Invalid choice!" << std::endl;
+            		std::cout << "Please enter 1 to 3 only." << std::endl;
+            	}
+            	else {
+            		break;
+            	}
+            }
         }
 
 		void registerUser() {
@@ -403,10 +440,7 @@ class Order : public productMenu {
 			std::cout << std::endl;
 		}
 
-		void chooseProduct(int &choice) { // loclin
-			
-			printProducts(choice);
-			std::cout << "Enter: ";
+		void chooseProduct(int &choice) {
 			
 		}
 
@@ -436,7 +470,12 @@ int main() {
 							case 1: //  Taking Order
 								od.takingOrder(choice3);
 								if (choice3 == 1) { // Order Foods
-									od.chooseMealCourse(choice4);
+									do {
+										od.chooseMealCourse(choice4);
+										
+									}
+									while (choice4 != 7);
+									
 								} else if (choice3 == 2) { // Buy Order Foods
 									
 								} else { // back
@@ -454,9 +493,6 @@ int main() {
 				break;
 			case 3:
 				break;
-			default:
-				std::cout << "Invalid choice!" << std::endl;
-				std::cout << "Please enter 1 to 3 only." << std::endl;
 		}
 	} while (choice1 != 3);
 	return 0;
