@@ -465,6 +465,20 @@ class Order : public productMenu {
 			std::cout << std::endl;
 		}
 
+		void pickOrder(int &course, int &choice) {
+			int qty = 0;
+			
+			printProducts(course);
+			std::cout << "Enter: ";
+			inputInt(choice);
+			
+			if (choice != 7) {
+				std::cout << "Enter quantity: ";
+				inputInt(qty);
+				// later add the ordername and quantity in stock
+			}
+		}
+
 		void buyOrderFoods() {
 			
 		}
@@ -477,22 +491,22 @@ int main() {
 
 	do {
 		bool isLogin = false;
-		od.orderingSystemMenu(choice1);
+		od.orderingSystemMenu(choice1); // show the main menu
 		switch (choice1) {
 			case 1: // User Register Account
-				od.registerUser();
+				od.registerUser(); // show|input the user register
 				break;
 			case 2: // User Login Account
-				od.loginUser(isLogin);
+				od.loginUser(isLogin); // show|input the user login
 				if (isLogin) { // check if login 
 					do {
-						od.oderingMenu(choice2);
+						od.oderingMenu(choice2); // show the ordering menu
 							if (choice2 == 1) { //  Taking Order
 								do {
-									od.takingOrder(choice3);
+									od.takingOrder(choice3); // show choices for order foods, buy order foods and Back
 									if (choice3 == 1) { // Order Foods
 										do {
-											od.chooseMealCourse(choice4);
+											od.chooseMealCourse(choice4); // show meal courses Appetizer to Hit drinks
 											
 										}
 										while (choice4 != 7);
