@@ -217,7 +217,7 @@ class productMenu {
 					return hitDrinks.at(mailChoice - 1).name;   
 					break;
 				default:
-					return "";
+					return ""; // to avoid errors
 			}
 		}
 
@@ -242,7 +242,7 @@ class productMenu {
 					return hitDrinks.at(mailChoice - 1).price;
 					break;
 				default:
-					return 0;
+					return 0; // to avoid errors
 			}
 		}
 };
