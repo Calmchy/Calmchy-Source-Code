@@ -1,10 +1,11 @@
 #include <iostream>
-#include <windows.h>
+//#include <windows.h>
 #include <iomanip>
 using namespace std;
 
 // noob code fr XD
 // Spaghetti code instead of using loops i use recursive function -_-
+// i fix it soon damn old code
 int main();
 int func = 1;
 int score1 = 0;
@@ -16,6 +17,13 @@ string cc2 = "hello";
 string cc3 = "calm";
 string cc4 = "Mind";
 string cc5 = "Chy";
+
+void textcolor(int x) { /* just remove this function if your device support windows.h */ };
+
+void ps() {
+    cout << "Please Enter to continue...";
+    cin.get();
+}
 
 void score(int& score1, int& score2, int& score3, int& score4) {
 	string stat = " ";
@@ -50,7 +58,7 @@ void score(int& score1, int& score2, int& score3, int& score4) {
 		rate = "☆☆☆☆☆    \t     ";
 	}
 	
-	system("cls");
+	system("clear");
 	cout << fixed << setprecision(2);
 	textcolor(6);
 	cout << "#=================================================#\n#";
@@ -87,7 +95,7 @@ void score(int& score1, int& score2, int& score3, int& score4) {
 	cout << "\t\t\t#\n";
 	cout << "#=================================================#\n";
 	cout << stat << endl;
-	system("pause");
+	ps();
 	main();
 }
 
@@ -98,6 +106,7 @@ void cheat() {
 	cout << "#=================================================#\n";
 	cout << "\n\n\tEnter cheat code: ";
 	cin >> cc1;
+	cin.ignore();
 	
 	if (cc1 == cc2) {
 		score1 = 5, score2 = 10, score3 = 15, score4 = 20;
@@ -108,8 +117,8 @@ void cheat() {
 		cout << "\n\tCheat code incorrect!\n\tScore\'s change to default\n";
 	}
 	
-	cout << "\n" << system("pause") << endl;
-	system("cls");
+	cout << "\n";
+	ps();
 	main();
 }
 
@@ -128,7 +137,7 @@ void easy(int& score1) {
     	num[i] = (rand() % data[i]) + data2[i];
     }
 	
-	system("cls");
+	system("clear");
 		
 	//DISPLAY
 	textcolor(2);
@@ -150,9 +159,9 @@ void easy(int& score1) {
 		}
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	}
-	system("pause");
+	ps();
 	
-	system("cls");
+	system("clear");
 	
 	int t1[5] = {0, 0, 0, 0, 0};
 	
@@ -229,7 +238,7 @@ void easy(int& score1) {
 	cout << "  $\n";
 	cout << "#=================================================#\n";	
 	cout << stat << endl;
-	system("pause");
+	ps();
 	main();
 }
 
@@ -248,7 +257,7 @@ void medium(int& score2) {
     	num[i] = (rand() % data[i]) + data2[i];
     }
 	
-	system("cls");
+	system("clear");
 	//DISPLAY
 	textcolor(1);
 	cout << "#=================================================#\n";
@@ -269,9 +278,9 @@ void medium(int& score2) {
 		}
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	}
-	system("pause");
+	ps();
 	
-	system("cls");
+	system("clear");
 	
 	int t1[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	
@@ -353,7 +362,7 @@ void medium(int& score2) {
 	cout << "  $\n";
 	cout << "#=================================================#\n";	
 	cout << stat << endl;
-	system("pause");
+	ps();
 	main();
 }
 
@@ -377,7 +386,7 @@ void hard(int& score3) {
     	num[i] = (rand() % data[i]) + data2[i];
     }
 	
-	system("cls");
+	system("clear");
 	for (int w = 1; w <= 2; ++w) {
 	//DISPLAY
 		textcolor(4);
@@ -410,9 +419,9 @@ void hard(int& score3) {
 				cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			}
 		}
-		system("pause");
+		ps();
 		cm = 0;
-		system("cls");
+		system("clear");
 	}
 	cm = 1;
 	
@@ -501,16 +510,16 @@ void hard(int& score3) {
 		cout << "  $\n";
 		cout << "#=================================================#\n";	
 		cout << stat << endl;
-		system("pause");
+		ps();
 		cm = 0;
-		system("cls");
+		system("clear");
 	}
 	main();
 }
 
 void creator() {
 	
-	system("cls");
+	system("clear");
 	textcolor(11);
 	cout << "#=================================================#\n";
 	cout << "#\tMATH QUIZ\tCREATED BY CALMCHY69\t  #\n";
@@ -519,7 +528,7 @@ void creator() {
 	cout << " by adjusting and debugging and use of new stuff\n";
 	cout << " like arrays, color text, clear screen,\n calling function to function and more\n";
 	cout << "\n\n Sarang aho code ayaw pag judge dira\n 1st year IT palang ko fr;-; LOL XD\n\t\t       ʕ•ᴥ•ʔ\n";
-	system("pause");
+    ps();
 	
 	main();
 }
@@ -543,7 +552,7 @@ void impossible(int& score4) {
     }
 	
 	for (int b = 1; b <= 2; ++b) {
-		system("cls");
+		system("clear");
 		//DISPLAY
 		textcolor(4);
 		cout << "#=================================================#\n";
@@ -562,7 +571,7 @@ void impossible(int& score4) {
 				}
 				cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			}
-			system("pause");
+			ps();
 			cm = 0;
 		}
 		else {
@@ -577,8 +586,8 @@ void impossible(int& score4) {
 			}
 		}
 	}
-	system("pause");
-	system("cls");
+	ps();
+	system("clear");
 	
 	int t1[20] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	// -_-
@@ -671,15 +680,15 @@ void impossible(int& score4) {
 		cout << "  $\n";
 		cout << "#=================================================#\n";	
 		cout << stat << endl;
-		system("pause");
+		ps();
 		cm = 0;
-		system("cls");
+		system("clear");
 	}
 	main();
 }
 
 void starting() {
-	system("cls");
+	system("clear");
 	textcolor(6);
 	cout << "#<<\t\t      Cxxdroid\t\t\t>>#";
 	textcolor(12);
@@ -697,9 +706,9 @@ void starting() {
 	textcolor(5);
 	cout << "\tTab _ ⠸ <- 3 dots\n";
 	textcolor(7);
-	system("pause");
+	ps();
 	main();
-	system("cls");
+	system("clear");
 }
 
 int main()  {
@@ -711,7 +720,7 @@ int main()  {
 		starting();
 	}
 	
-	system("cls");
+	system("clear");
 	// DISPLAY
 	textcolor(6);
 	cout << "#=================================================#\n";
@@ -740,7 +749,6 @@ int main()  {
 	cout << "     5. SCORE📊 ";
 	textcolor(3);
 	cc6 = "-_-";
-	cout << "\t";
 	cout << "     6. CREATOR😎 ";
 	textcolor(6);
 	cout << "\t\t\t#\n#";
@@ -749,7 +757,7 @@ int main()  {
 	cout << "\t     7. CHEAT🤫 ";
 	textcolor(7);
 	cc7 = "69";
-	cout << "\t     8. EXIT👻 ";
+	cout << "     8. EXIT👻 ";
 	textcolor(6);
 	cout << "\t\t\t#\n";
 	cout << "#=================================================#\n";
@@ -764,43 +772,43 @@ int main()  {
 	switch(a) {
 	case '1':
 		sleep(1);
-		system("cls");
+		system("clear");
 		easy(score1);
 		break;
 			
 	case '2':
 		sleep(1);
-		system("cls");
+		system("clear");
 		medium(score2);
 		break;
 			
 	case '3':
 		sleep(1);
-		system("cls");
+		system("clear");
 		hard(score3);
 		break;
 			
 	case '4':
 		sleep(1);
-		system("cls");
+		system("clear");
 		impossible(score4);
 		break;
 			
 	case '5':
 		sleep(1);
-		system("cls");
+		system("clear");
 		score(score1, score2, score3, score4);
 		break;
 			
 	case '6':
 		sleep(1);
-		system("cls");
+		system("cleae");
 		creator();
 		break;
 		
 	case '7':
 		sleep(1);
-		system("cls");
+		system("clear");
 		cc2 = tt1 + tt2 + tt3;
 		cheat();
 		break;
@@ -810,11 +818,12 @@ int main()  {
 		
 	default:
 		cout << "\n\tIvalid input :(\n\tPlease enter 1 to 7 only!\n";
-		cout << "\n\t" << system("pause") << endl; // this line and the system("pause") cannot attached in c++adroid
-		system("cls");
+		cout << "\n";
+		ps();// this line and the system("pause") cannot attached in c++adroid
+		system("clear");
 		main();
 		break;
 	}
-	system("cls");
+	system("clear");
 	return 0;
 }
