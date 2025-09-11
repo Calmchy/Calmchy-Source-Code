@@ -83,7 +83,7 @@ class userOrder {
 		}
 
 		void showReceipt() {
-			
+			// coming soon
 		}
 };
 
