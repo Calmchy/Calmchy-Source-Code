@@ -6,6 +6,7 @@ using namespace std;
 // noob code fr XD
 // Spaghetti code instead of using loops i use recursive function -_-
 // i fix it soon damn old code
+// refactoring soon
 int main();
 int func = 1;
 int score1 = 0;
