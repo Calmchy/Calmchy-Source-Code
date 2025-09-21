@@ -1,5 +1,5 @@
 #include <iostream>
-//#include <windows.h>
+//#include <windows.h> // not working in linux terminal
 #include <iomanip>
 using namespace std;
 
