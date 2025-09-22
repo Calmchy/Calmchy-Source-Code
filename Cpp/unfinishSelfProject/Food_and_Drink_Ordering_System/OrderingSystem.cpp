@@ -34,7 +34,6 @@ class accountManager : public userAccount {
 		
 		void userRegister() override {
 			users.push_back(new accountManager(username, password, role));
-			//std::cout << "Registered as [" << role << "]" << std::endl;
 		}
 
 		bool userLogin(const std::string& usr, const std::string& pswd) override {
