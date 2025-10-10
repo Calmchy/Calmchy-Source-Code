@@ -1,0 +1,9 @@
+/home/calmchy/github/Calmchy-Source-Code/QT-Cpp/QT-Banking-System/build/Desktop-Debug/CMakeFiles/QT-Banking-System.dir
+/home/calmchy/github/Calmchy-Source-Code/QT-Cpp/QT-Banking-System/build/Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/calmchy/github/Calmchy-Source-Code/QT-Cpp/QT-Banking-System/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/calmchy/github/Calmchy-Source-Code/QT-Cpp/QT-Banking-System/build/Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/calmchy/github/Calmchy-Source-Code/QT-Cpp/QT-Banking-System/build/Desktop-Debug/CMakeFiles/install.dir
+/home/calmchy/github/Calmchy-Source-Code/QT-Cpp/QT-Banking-System/build/Desktop-Debug/CMakeFiles/install/local.dir
+/home/calmchy/github/Calmchy-Source-Code/QT-Cpp/QT-Banking-System/build/Desktop-Debug/CMakeFiles/install/strip.dir
+/home/calmchy/github/Calmchy-Source-Code/QT-Cpp/QT-Banking-System/build/Desktop-Debug/CMakeFiles/QT-Banking-System_autogen_timestamp_deps.dir
+/home/calmchy/github/Calmchy-Source-Code/QT-Cpp/QT-Banking-System/build/Desktop-Debug/CMakeFiles/QT-Banking-System_autogen.dir
