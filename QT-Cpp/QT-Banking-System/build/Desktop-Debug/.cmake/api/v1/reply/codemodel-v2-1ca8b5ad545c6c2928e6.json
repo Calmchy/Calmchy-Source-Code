@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-55faf26a5679e7567625.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "QT-Banking-System",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "QT-Banking-System::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QT-Banking-System-Debug-06f3a20c9c0217896fdc.json",
+					"name" : "QT-Banking-System",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "QT-Banking-System_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QT-Banking-System_autogen-Debug-1453ca79a5520e6eb59b.json",
+					"name" : "QT-Banking-System_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "QT-Banking-System_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QT-Banking-System_autogen_timestamp_deps-Debug-64bb7ac78413d2e6f3ed.json",
+					"name" : "QT-Banking-System_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/calmchy/github/Calmchy-Source-Code/QT-Cpp/QT-Banking-System/build/Desktop-Debug",
+		"source" : "/home/calmchy/github/Calmchy-Source-Code/QT-Cpp/QT-Banking-System"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
